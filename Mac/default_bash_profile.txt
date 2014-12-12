@@ -1,0 +1,11 @@
+export PATH=$PATH:~/bin
+function cls
+{
+clear
+}
+
+# function for the symbolically linked sublime text app
+function st
+{
+    subl "$@"
+} 

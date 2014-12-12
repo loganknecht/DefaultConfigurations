@@ -1,0 +1,14 @@
+You need to create a bin folder in your home directory
+
+1: Make bin dir for storage
+mkdir ~/bin
+
+2: Create symbolic link
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+
+3: Add this to .bash_profile in order to create custom shortcut
+# function for the symbolically linked sublime text app
+function st
+{
+    subl "$@"
+} 
