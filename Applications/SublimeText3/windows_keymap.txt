@@ -1,4 +1,13 @@
 [
+	// Allows vintageous multiple cursor selection above and below current cursor
+	{ "keys": ["ctrl+j"], "command": "select_lines", "args": {"forward": true} },
+	{ "keys": ["ctrl+k"], "command": "select_lines", "args": {"forward": false} },
+
+	// Added here to overwrite tab settings so that tabbing works backwards and forwards
+	{ "keys": ["ctrl+]"], "command": "indent" },
+	{ "keys": ["ctrl+["], "command": "unindent" },
+	{ "keys": ["ctrl+shift+r"], "command": "reindent"},
+
 	// Added here to overwrite tab settings so that tabbing works backwards and forwards
 	{ "keys": ["ctrl+shift+n"], "command": "new_window" },
 	{ "keys": ["ctrl+shift+w"], "command": "close_window" },
@@ -29,15 +38,4 @@
 	{ "keys": ["ctrl+k", "ctrl+v"], "command": "paste_from_history" },
 
 	{ "keys": ["ctrl+a"], "command": "select_all" },
-	
-	// Added here to overwrite tab settings so that tabbing works backwards and forwards
-	{ "keys": ["ctrl+]"], "command": "indent" },
-	{ "keys": ["ctrl+["], "command": "unindent" },
-
-	// Allows ctrl+s to be used for saving
-	{ "keys": ["ctrl+s"], "command": "save" },
-
-	// Allows vintageous multiple cursor selection above and below current cursor
-	{ "keys": ["ctrl+h"], "command": "select_lines", "args": {"forward": true} },
-	{ "keys": ["ctrl+j"], "command": "select_lines", "args": {"forward": false} }
 ] 
