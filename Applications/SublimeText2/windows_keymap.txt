@@ -2,9 +2,14 @@
 	// Allows vintageous multiple cursor selection above and below current cursor
 	{ "keys": ["ctrl+j"], "command": "select_lines", "args": {"forward": true} },
 	{ "keys": ["ctrl+k"], "command": "select_lines", "args": {"forward": false} },
-
 	// Added here to overwrite tab settings so that tabbing works backwards and forwards
 	{ "keys": ["ctrl+]"], "command": "indent" },
 	{ "keys": ["ctrl+["], "command": "unindent" },
+
+	// Convert spaces to tabs
+	{ "keys": ["ctrl+shift+d"], "command": "unexpand_tabs", "args" : {"set_translate_tabs" : true} },
+	// Converts tabs to spaces
+	{ "keys": ["ctrl+shift+s"], "command": "expand_tabs", "args" : {"set_translate_tabs" : false} },
+	// Reindents
 	{ "keys": ["ctrl+shift+r"], "command": "reindent"}
-] 
+]
