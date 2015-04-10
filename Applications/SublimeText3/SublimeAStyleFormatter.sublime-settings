@@ -191,7 +191,7 @@
         // Break "else if" header combinations into separate lines. This option has no effect
         // if keep-one-line-statements is used, the "else if" statements will remain as they are.
         // If this option is NOT used, "else if" header combinations will be placed on a single line.
-        "break-elseifs": true,
+        "break-elseifs": false,
         // Add brackets to unbracketed one line conditional statements (e.g. 'if', 'for', 'while'...).
         // The statement must be on a single line. The brackets will be added according to the
         // currently requested predefined style or bracket type. If no style or bracket type is
