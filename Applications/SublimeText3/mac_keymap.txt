@@ -1,8 +1,0 @@
-[
-	{ "keys": ["ctrl+k"], "command": "select_lines", "args": {"forward": false} },
-	{ "keys": ["ctrl+j"], "command": "select_lines", "args": {"forward": true} },
-	// Convert spaces to tabs
-	{ "keys": ["ctrl+shift+d"], "command": "unexpand_tabs", "args" : {"set_translate_tabs" : true} },
-    	// Converts tabs to spaces
-	{ "keys": ["ctrl+shift+s"], "command": "expand_tabs", "args" : {"set_translate_tabs" : false} }
-]
