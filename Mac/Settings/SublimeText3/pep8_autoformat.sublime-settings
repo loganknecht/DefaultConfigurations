@@ -1,0 +1,10 @@
+{
+    // autoformat code on save ?
+    "autoformat_on_save": true,
+
+    // list codes for fixes; used by --ignore and --select
+    "list-fixes": true,
+
+    // Maximum line length
+    "max-line-length": 80
+}
