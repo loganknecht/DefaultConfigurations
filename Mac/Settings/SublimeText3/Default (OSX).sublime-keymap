@@ -1,4 +1,3 @@
-// Custom Keybinds for Sublime Text 3
 [{
         "keys": ["ctrl+k"],
         "command": "select_lines",
@@ -36,4 +35,7 @@
             "setting": "word_wrap"
         }
     },
+    // Changes tab traversal to be in order instead of most recently used
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" }
 ]
