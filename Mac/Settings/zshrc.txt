@@ -102,17 +102,33 @@ SPLUNK_HOME='/Applications/Splunk'
 export SPLUNK_HOME 
 export PATH=$PATH:~/bin 
  
+# Not used in zsh
 # alias ll='ls -lG' 
 # alias la='ls -a' 
- 
-cls(){ 
-clear 
-} 
- 
-cld(){ 
-clear 
-ls
-} 
+# Copied from here: https://coderwall.com/p/x3jmig/remove-all-your-local-git-branches-but-keep-master
+alias gbr="git branch | grep -v "master" | xargs git branch -D"
+alias gba="git branch -a" 
+alias gl="git log --pretty=oneline -10"
+
+cls(){
+clear
+}
+
+dc() { 
+docker-compose $@
+}
+
+dm() {
+docker-machine $@
+}
+
+dmloadenv() { 
+eval $(dm env $@) 
+}
+
+killallpython() {
+ps -ax | grep python | awk '{print $1}' | xargs kill -9
+}
 
 # Sublime Text symbolically linked to 'subl' in ~/bin 
 st() { 
@@ -123,15 +139,3 @@ ste() {
 subl $@ 
 exit 
 } 
- 
-dm() { 
-docker-machine $@ 
-} 
-
-dmloadenv() { 
-eval $(dm env $@) 
-}
-
-killallpython() {
-ps -ax | grep python | awk '{print $1}' | xargs kill -9
-}
