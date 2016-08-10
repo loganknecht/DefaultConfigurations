@@ -97,22 +97,46 @@ source $ZSH/oh-my-zsh.sh
 COPYFILE_DISABLE=1;
 export COPYFILE_DISABLE
 
+########################################
+# Shell Commands
+########################################
 # If you are running Splunk in a medium to large environment, you are probably sharing Splunk with other groups.  In many places, this results in one group running Splunk as a service for any number of internal customers.  The challenge then becomes sharing the maintenance and run costs of the infrastructure.  As a Splunk administrator, I would have to run several long-running searches to try and figure out the costs.  This App should put all of that to rest.
 SPLUNK_HOME='/Applications/Splunk' 
 export SPLUNK_HOME 
 export PATH=$PATH:~/bin 
  
+########################################
+# Shell Commands
+########################################
 # Not used in zsh
 # alias ll='ls -lG' 
 # alias la='ls -a' 
-# Copied from here: https://coderwall.com/p/x3jmig/remove-all-your-local-git-branches-but-keep-master
-alias gbr="git branch | grep -v "master" | xargs git branch -D"
-alias gba="git branch -a" 
-alias gl="git log --pretty=oneline -10"
 
 cls(){
 clear
 }
+
+########################################
+# Git Commands
+########################################
+# Copied from here: https://coderwall.com/p/x3jmig/remove-all-your-local-git-branches-but-keep-master
+alias gbr="git branch | grep -v "master" | xargs git branch -D"
+alias gba="git branch -a" 
+alias gl="git log --pretty=oneline -10"
+alias gn="git reset --hard HEAD && git clean -dfx" # Stands for git-nuke
+
+########################################
+# Python Commands
+########################################
+killallpython() {
+ps -ax | grep python | awk '{print $1}' | xargs kill -9
+}
+
+########################################
+# Docker Commands
+########################################
+# https://gist.github.com/ngpestelos/4fc2e31e19f86b9cf10b
+alias drc="docker ps -q -a | xargs docker rm"
 
 dc() { 
 docker-compose $@
@@ -126,11 +150,10 @@ dmloadenv() {
 eval $(dm env $@) 
 }
 
-killallpython() {
-ps -ax | grep python | awk '{print $1}' | xargs kill -9
-}
-
-# Sublime Text symbolically linked to 'subl' in ~/bin 
+########################################
+# Sublime Text Commands
+########################################
+# Sublime Text must be symbolically linked to 'subl' in ~/bin 
 st() { 
 subl $@ 
 } 
