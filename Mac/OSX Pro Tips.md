@@ -61,16 +61,16 @@ A lot of these you’ll want to see if you can “brew install” them because b
 #### GitGutter-Edge
 * Displays modifications on the left side of the file view to show additions, modifications, and deletions on your current branch
 
-## Spacemacs
-* A highly tailored emacs client focused on combining the best of both worlds between e-macs and vim
-* Learning curve – still insanely steep
-* http://spacemacs.org/
-
 #### Splunk Conf File Syntax Highlighting
 * Syntax high-lighting for splunk conf files
 
 #### Vintageous
 * Vim style key bindings
+
+## Spacemacs
+* A highly tailored emacs client focused on combining the best of both worlds between e-macs and vim
+* Learning curve – still insanely steep
+* http://spacemacs.org/
 
 ## ZShell
 * Required for oh-my-zsh
