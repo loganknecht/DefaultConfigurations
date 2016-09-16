@@ -61,6 +61,9 @@ A lot of these you’ll want to see if you can “brew install” them because b
 #### GitGutter-Edge
 * Displays modifications on the left side of the file view to show additions, modifications, and deletions on your current branch
 
+#### Python PEP-8 Auto-Formatter
+* Auto-formats Python files so I don't have to listen to Becky from QA complain about how we should be adhering to PEP8
+
 #### Splunk Conf File Syntax Highlighting
 * Syntax high-lighting for splunk conf files
 
