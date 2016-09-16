@@ -75,7 +75,7 @@ A lot of these you’ll want to see if you can “brew install” them because b
 ## ZShell
 * Required for oh-my-zsh
 * Quick discussion on the differences between bash and zsh
-** https://www.quora.com/What-is-the-difference-between-bash-and-zsh
+    * https://www.quora.com/What-is-the-difference-between-bash-and-zsh
 
 # Useful Websites
 
