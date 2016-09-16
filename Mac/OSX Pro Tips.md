@@ -67,6 +67,8 @@ A lot of these you’ll want to see if you can “brew install” them because b
 
 #### Splunk Conf File Syntax Highlighting
 * Syntax high-lighting for splunk conf files
+  * Made by Shakeel Brohamed himself
+  * https://packagecontrol.io/packages/Splunk%20Conf%20File%20Syntax%20Highlighting
 
 #### Vintageous
 * Vim style key bindings
