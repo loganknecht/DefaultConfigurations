@@ -6,6 +6,12 @@ A lot of these you’ll want to see if you can “brew install” them because b
 * Better productivity with OS X tools
 * https://www.alfredapp.com/
 
+## Bro Pages
+* Much more useful than a man page - it's bro pages!
+* http://bropages.org/
+* sudo gem install bropages
+* Ex: `bro find`
+
 ## Go2Shell
 * https://itunes.apple.com/en/app/go2shell/id445770608?l=en&mt=12
 * Allows using the cmd+space shortcut to open a terminal in the currently selected finder directory.
