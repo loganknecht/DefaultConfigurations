@@ -63,6 +63,7 @@ A lot of these you’ll want to see if you can “brew install” them because b
 
 #### Python PEP-8 Auto-Formatter
 * Auto-formats Python files so I don't have to listen to Becky from QA complain about how we should be adhering to PEP8
+   * https://packagecontrol.io/packages/Python%20PEP8%20Autoformat
 
 #### Splunk Conf File Syntax Highlighting
 * Syntax high-lighting for splunk conf files
