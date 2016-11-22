@@ -8,7 +8,7 @@
         "esformatter-quote-props",
         "esformatter-quotes",
         "esformatter-remove-trailing-commas",
-        "esformatter-semicolons",
+        // "esformatter-semicolons", // This breaks js by adding semi-colons in the incorrect location
         "esformatter-spaced-lined-comment",
         "esformatter-var-each"
     ],
@@ -30,7 +30,13 @@
         "formatJSX": true,                    //Duh! that's the default 
         "formatJSXExpressions": true,         // default true, if false jsxExpressions won't be recursively formatted 
         "htmlOptions": {
-          // put here the options for js-beautify.html 
+            // put here the options for js-beautify.html 
+            "brace_style": "collapse",
+            "indent_char": " ",
+            "indent_size": 4,
+            "max_preserve_newlines": 2,
+            "preserve_newlines": true
+            //wrap_line_length: 250 
         },
         "JSXExpressionsSingleLine": true,     // default true, if false the JSXExpressions might span several lines 
         "maxAttrsOnTag": 3,                   // if lower or equal than 3 attributes, they will be kept on a single line 
