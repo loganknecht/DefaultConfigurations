@@ -1,0 +1,54 @@
+{
+    "preset": "default",
+    "plugins": [
+        "esformatter-collapse-objects",
+        "esformatter-jsx",
+        "esformatter-literal-notation",
+        "esformatter-parseint",
+        "esformatter-quote-props",
+        "esformatter-quotes",
+        "esformatter-remove-trailing-commas",
+        "esformatter-semicolons",
+        "esformatter-spaced-lined-comment",
+        "esformatter-var-each"
+    ],
+    "collapseObjects": {
+        "ObjectExpression": {
+            "maxLineLength": 79,
+            "maxKeys": 1
+        }
+    },
+    "indent" : {
+        "value": "    ",
+        "AlignComments": false
+    },
+    "jsx": {
+        "formatJSX": true,                     //Duh! that's the default 
+        "attrsOnSameLineAsTag": false,         // move each attribute to its own line 
+        "maxAttrsOnTag": 3,                    // if lower or equal than 3 attributes, they will be kept on a single line 
+        "firstAttributeOnSameLine": true,      // keep the first attribute in the same line as the tag 
+        "formatJSXExpressions": true,          // default true, if false jsxExpressions won't be recursively formatted 
+        "JSXExpressionsSingleLine": true,      // default true, if false the JSXExpressions might span several lines 
+        "alignWithFirstAttribute": false,      // do not align attributes with the first tag 
+        "spaceInJSXExpressionContainers": " ", // default to one space. Make it empty if you don't like spaces between JSXExpressionContainers 
+        "removeSpaceBeforeClosingJSX": false,  // default false. if true <React.Something /> => <React.Something/> 
+        "closingTagOnNewLine": false,          // default false. if true attributes on multiple lines will close the tag on a new line 
+        "htmlOptions": {
+            // put here the options for js-beautify.html 
+        }
+    },
+    "quotes": {
+        "type": "double"
+    },
+    "whiteSpace": {
+        "before": {
+            "ObjectExpressionClosingBrace": 0,
+            "ModuleSpecifierClosingBrace": 0,
+            "PropertyName": 1
+        },
+        "after": {
+            "ObjectExpressionOpeningBrace": 0,
+            "ModuleSpecifierOpeningBrace": 0
+        }
+    }
+}
