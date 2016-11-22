@@ -19,8 +19,8 @@
         }
     },
     "indent" : {
-        "value": "    ",
-        "AlignComments": false
+        "AlignComments": false,
+        "value": "    "
     },
     "jsx": {
         "alignWithFirstAttribute": false,     // do not align attributes with the first tag 
@@ -31,7 +31,7 @@
         "formatJSXExpressions": true,         // default true, if false jsxExpressions won't be recursively formatted 
         "htmlOptions": {
             // put here the options for js-beautify.html 
-            "brace_style": "collapse",
+            "brace_style": "collapse-preserve-inline", // [collapse, collapse-preserve-inline, expand, end-expand, none]
             "indent_char": " ",
             "indent_size": 4,
             "max_preserve_newlines": 2,
