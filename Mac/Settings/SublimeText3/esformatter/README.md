@@ -1,5 +1,5 @@
 # Core Module
-npm install -g esformatter
+- npm install -g esformatter
 
 
 # Plug-ins
@@ -7,15 +7,15 @@ See here:
 https://github.com/millermedeiros/esformatter/wiki/Plugins
 
 ## Steps
-npm install -g esformatter-collapse-objects
-npm install -g esformatter-literal-notation
-npm install -g esformatter-parseint
-npm install -g esformatter-quote-props
-npm install -g esformatter-quotes
-npm install -g esformatter-remove-trailing-commas
-npm install -g esformatter-semicolons
-npm install -g esformatter-spaced-lined-comment
-npm install -g esformatter-var-each
+- npm install -g esformatter-collapse-objects
+- npm install -g esformatter-literal-notation
+- npm install -g esformatter-parseint
+- npm install -g esformatter-quote-props
+- npm install -g esformatter-quotes
+- npm install -g esformatter-remove-trailing-commas
+- npm install -g esformatter-semicolons
+- npm install -g esformatter-spaced-lined-comment
+- npm install -g esformatter-var-each
 
 
 
