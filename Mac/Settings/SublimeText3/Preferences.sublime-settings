@@ -1,21 +1,40 @@
 {
+	"added_words":
+	[
+		"app",
+		"Splunkbase",
+		"Splunk",
+		"splunk"
+	],
+	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/Neon Color Scheme/Neon.tmTheme",
-	"detect_indentation": true,
+	"color_scheme": "Packages/User/Neon (Flake8Lint).tmTheme",
+	"detect_indentation": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": false,
+	"fade_fold_buttons": false,
+    "folder_exclude_patterns": [],
 	"font_size": 22,
+	"highlight_line": true,
 	"ignore_vcs_packages": "true",
 	"ignored_packages":
 	[
 		"RestructuredText",
 		"Vintage"
 	],
+	"ignored_words":
+	[
+		"Retrievability",
+		"Versioning",
+		"postgres",
+		"tarball"
+	],
 	"rulers":
 	[
 		80
 	],
 	"show_encoding": true,
+	"spell_check": false,
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
 	"use_tab_stops": true,
