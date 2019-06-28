@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/lknecht/.oh-my-zsh
+export ZSH=/Users/hugbot/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -58,7 +58,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/lknecht/bin"
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/hugbot/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -92,18 +92,28 @@ source $ZSH/oh-my-zsh.sh
 ################################################################################
 # Personal Configurations
 ################################################################################
-
-# disable special creation/extraction of ._* files by tar, etc. on Mac OS X
-COPYFILE_DISABLE=1;
-export COPYFILE_DISABLE
-
+########################################
+# OSX Commands
+########################################
+kill_ds_store() {
+    find . -name ".DS_Store" -depth -exec rm {} \;
+}
 ########################################
 # Shell Commands
 ########################################
-# If you are running Splunk in a medium to large environment, you are probably sharing Splunk with other groups.  In many places, this results in one group running Splunk as a service for any number of internal customers.  The challenge then becomes sharing the maintenance and run costs of the infrastructure.  As a Splunk administrator, I would have to run several long-running searches to try and figure out the costs.  This App should put all of that to rest.
-SPLUNK_HOME='/Applications/Splunk' 
+# If you are running Splunk in a medium to large environment, you are probably 
+# sharing Splunk with other groups. In many places, this results in one group 
+# running Splunk as a service for any number of internal customers. The 
+# challenge then becomes sharing the maintenance and run costs of the 
+# infrastructure. As a Splunk administrator, I would have to run several 
+# long-running searches to try and figure out the costs. This App should put all
+# of that to rest.
+SPLUNK_HOME="/Applications/Splunk" 
+SPLUNK_CORE_LIB="$SPLUNK_HOME/lib/python2.7/site-packages/splunk"
 export SPLUNK_HOME 
-export PATH=$PATH:~/bin 
+export SPLUNK_CORE_LIB
+# export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:/usr/local/bin
  
 ########################################
 # Shell Commands
@@ -111,9 +121,8 @@ export PATH=$PATH:~/bin
 # Not used in zsh
 # alias ll='ls -lG' 
 # alias la='ls -a' 
-
 cls(){
-clear
+    clear
 }
 
 ########################################
@@ -123,42 +132,80 @@ clear
 alias gbr="git branch | grep -v "master" | xargs git branch -D"
 alias gba="git branch -a" 
 alias gl="git log --pretty=oneline -10"
-alias gn="git reset --hard HEAD && git clean -dfx" # Stands for git-nuke
+alias gn="echo 'NUKING GIT CONFIGURATIONS BACK TO HEAD' && git reset --hard HEAD && git clean -dfx && git remote prune origin && git pull" # Stands for git-nuke
 
 ########################################
 # Python Commands
 ########################################
 killallpython() {
-ps -ax | grep python | awk '{print $1}' | xargs kill -9
+    ps -ax | grep python | awk '{print $1}' | xargs kill -9
 }
+
+
+django_all_migrations() {
+    find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+    find . -path "*/migrations/*.pyc"  -delete
+}
+
+alias venv_create="virtualenv -p python3 venv && source venv/bin/activate"
+alias venv_start="source venv/bin/activate"
 
 ########################################
 # Docker Commands
 ########################################
 # https://gist.github.com/ngpestelos/4fc2e31e19f86b9cf10b
-alias drc="docker ps -q -a | xargs docker rm"
+alias docker-nuke-containers="docker ps --quiet --all | xargs docker rm --force"
+alias docker-nuke-images="docker images | sed 1d | awk '{print $3}' | xargs docker rmi --force"
 
 dc() { 
-docker-compose $@
+    docker-compose $@
 }
 
 dm() {
-docker-machine $@
+    docker-machine $@
 }
 
-dmloadenv() { 
-eval $(dm env $@) 
+dm-switch() { 
+    eval $(dm env $@) 
 }
 
 ########################################
 # Sublime Text Commands
 ########################################
 # Sublime Text must be symbolically linked to 'subl' in ~/bin 
-st() { 
-subl $@ 
-} 
- 
-ste() { 
-subl $@ 
-exit 
-} 
+st() {
+    subl $@ 
+}
+
+ste() {
+    subl $@ 
+    exit
+}
+
+########################################
+# SSH
+########################################
+kill-all-ssh() {
+    ps -a | grep ssh | awk '{ print $1 }' | xargs kill -9
+}
+
+lenny() {
+    echo " (    ͡°  ͜ʖ   ͡°)" | pbcopy
+}
+
+shrug() {
+    echo "¯\_(ツ)_/¯" | pbcopy
+}
+
+pyimport_template() {
+    echo "# Python Standard Libraries\n# N/A\n# Third-Party Libraries\n# N/A\n# Custom Libraries\n# N/A" | pbcopy
+}
+
+# OPAM configuration
+. /Users/Hugbot/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+########################################
+# R
+########################################
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
