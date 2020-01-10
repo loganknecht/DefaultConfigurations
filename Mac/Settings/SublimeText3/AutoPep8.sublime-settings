@@ -1,0 +1,11 @@
+{
+    // Specifies whether or not format files once they saved.
+    "format_on_save": true,
+    // Do not fix these errors / warnings(e.g. E4, W)
+    "ignore": "E501",
+    "max-line-length": 140,
+    // Format/Preview menu items only appear for views
+    // with syntax from `syntax_list`
+    // value is base filename of the .tmLanguage syntax files
+    "syntax_list": ["Python", "Python Django", "PythonImproved"],
+}
