@@ -1,0 +1,84 @@
+{
+    // ----------------------------------------------------------------------
+    // Auto Format on Save
+    // ----------------------------------------------------------------------
+    //
+    // @param {bool} "auto_format_on_save"
+    // @default false
+    //
+    // Whether or not to automatically format the file on save.
+    // ----------------------------------------------------------------------
+    "auto_format_on_save": true,
+
+    // ----------------------------------------------------------------------
+    // Custom File Extensions
+    // ----------------------------------------------------------------------
+    //
+    // @param {array} "custom_file_extensions"
+    // @default []
+    //
+    // Additional custom file extensions to format.
+    //
+    // There's built-in support already for "js", "jsx", "mjs", "json", "html",
+    // "graphql/gql", "ts", "tsx", "css", "scss", "less", "md", "mdx", "yml"
+    // and "vue" and "component.html" (angular html) files.
+    //
+    // Additional file extensions MUST be specified here, and without the leading dot.
+    // ----------------------------------------------------------------------
+    "custom_file_extensions": ["sublime-settings", "yaml"],
+
+    // ----------------------------------------------------------------------
+    // Prettier Options
+    // ----------------------------------------------------------------------
+    //
+    // Native Prettier options are defined here.
+    //
+    // For a complete list of supported options and acceptable values,
+    // visit https://github.com/jlongster/prettier.
+    // ----------------------------------------------------------------------
+    "prettier_options": {
+        // --------------------------------------------------------------------
+        // printWidth
+        // --------------------------------------------------------------------
+        //
+        // @param {int} "prettier_options.printWidth"
+        // @default 80
+        //
+        // Fit code within this line limit.
+        // --------------------------------------------------------------------
+        "printWidth": 120,
+
+        // --------------------------------------------------------------------
+        // tabWidth
+        // --------------------------------------------------------------------
+        //
+        // @param {int} "prettier_options.tabWidth"
+        // @default 2
+        //
+        // Specify the number of spaces per indentation-level.
+        //
+        // IMPORTANT: By default, "tabWidth" is automatically set using the
+        // SublimeText configured value for "tab_size". To disable this
+        // behavior, you must first change the "disable_tab_width_auto_detection"
+        // setting to "true".
+        // --------------------------------------------------------------------
+        "tabWidth": 4,
+
+        // --------------------------------------------------------------------
+        // trailingComma
+        // --------------------------------------------------------------------
+        //
+        // @param {string} "prettier_options.trailingComma"
+        // @default "none"
+        //
+        // Controls the printing of trailing commas wherever possible.
+        //
+        // Valid options:
+        //
+        // "none" - No trailing commas
+        // "es5"  - Trailing commas where valid in ES5 (objects, arrays, etc)
+        // "all"  - Trailing commas wherever possible (function arguments)
+        // --------------------------------------------------------------------
+        "trailingComma": "none"
+    }
+}
