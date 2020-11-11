@@ -155,9 +155,19 @@ alias venv_start="source venv/bin/activate"
 ########################################
 # https://gist.github.com/ngpestelos/4fc2e31e19f86b9cf10b
 alias docker-nuke-containers="docker ps --quiet --all | xargs docker rm --force"
+dnc() { 
+    docker-nuke-containers $@
+}
 alias docker-nuke-images="docker images | sed 1d | awk '{print $3}' | xargs docker rmi --force"
+dni() { 
+    docker-nuke-images $@
+}
+alias docker-nuke-volumes="docker volume ls | sed 1d | awk '{ print $2 }' | xargs docker volume rm"
+dnv() {
+    docker-nuke-volumes $@
+}
 
-dc() { 
+dc() {
     docker-compose $@
 }
 
@@ -165,8 +175,8 @@ dm() {
     docker-machine $@
 }
 
-dm-switch() { 
-    eval $(dm env $@) 
+dm-switch() {
+    eval $(dm env $@)
 }
 
 ########################################
