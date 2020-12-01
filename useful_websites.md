@@ -1,4 +1,4 @@
-% Useful Websites
+# Useful Websites
 
 # Memes
 
@@ -8,7 +8,7 @@
 # General Design
 
 -   https://miro.com
-    -   "Infinit Whiteboard"
+    -   "Infinite Whiteboard"
     -   Super helpful for helping with mind-maps, design, architecture,and workflows
 
 # Regex
