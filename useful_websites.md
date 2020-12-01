@@ -24,6 +24,8 @@
     -   Cheat sheets of implementation for each language
 -   https://cdsmith.wordpress.com/2011/01/09/an-old-article-i-wrote/
     -   What To Know Before Debating Type Systems
+-   https://kunststube.net/encoding/
+    -   What Every Programmer Absolutely, Positively Needs To Know About Encodings And Character Sets To Work With Text
 
 ## JavaScript
 
